@@ -15,8 +15,10 @@ kubeconfig: Configured
 
 ### 1. Set up (in kubernetes/minikube) 2 pods with a java example app:
 
-I ended up a lot of time to setup Spring-boot applciation however due to some java issues in my system I could not create a jar file. I am not very familiar with the Spring frame work thereofore I was not successful with solve the issue. However I to go one with the problem statement I deployed a Nodejs application.
-nodejs.yaml
+I ended up spending a lot of time to setup Spring-boot applciation however due to some java issues in my system I could not create a jar file. I am not very familiar with the Spring frame work thereofore I was not successful with solve the issue. 
+However to go one with the problem statement I deployed a Nodejs application. The Nodejs app is very basic and I have created it from scratch and build and image and pushed to docker hub. the links are given below.
+
+kubernetes file - nodejs.yaml
 
 ### 2. Load balance the traffic to the backends.
 Services takes care of it. There is default round robin balancing created with services.
