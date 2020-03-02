@@ -101,3 +101,19 @@ mysql                   1/1     1            1           156m
 simple-api-deployment   2/2     2            2           2m11s
 
 ```
+
+### Docker hub
+https://hub.docker.com/repository/docker/gairik/node
+
+### Docker commands to build and push
+From the folder
+```shell
+docker build . -t gairik/node:v1
+docker push gairik/node:vq
+```
+
+### References
+https://www.serverlab.ca/tutorials/development/nodejs/how-to-deploy-nodejs-applications-in-kubernetes/
+https://medium.com/@gairikaluni
+
+
