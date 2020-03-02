@@ -1,6 +1,6 @@
 
-Minikube setup
-========
+#Minikube setup
+
 I installed minikube as given in the website, by downloading the binary. Kubectl was already installed in my system. Few commands to show that minikube is installed and working as expected are:
 
 ```shell
@@ -13,27 +13,25 @@ kubeconfig: Configured
 
 ```
 
-1. Set up (in kubernetes/minikube) 2 pods with a java example app:
-========
+# 1. Set up (in kubernetes/minikube) 2 pods with a java example app:
+
 I ended up a lot of time to setup Spring-boot applciation however due to some java issues in my system I could not create a jar file. I am not very familiar with the Spring frame work thereofore I was not successful with solve the issue. However I to go one with the problem statement I deployed a Nodejs application.
 nodejs.yaml
 
-2. Load balance the traffic to the backends.
-========
+# 2. Load balance the traffic to the backends.
 Services takes care of it. There is automatic round robin balancing done.
 
-3. Create policy to auto-heal or recreate the pod if it goes down or is unresponsive.
-========
+# 3. Create policy to auto-heal or recreate the pod if it goes down or is unresponsive.
+
 Deployment takes care of it.
 
-4. Add a mysql.
-========
+# 4. Add a mysql.
+
 I created PV and PVC for mysql and the files in the repo with name
 my-sql-deployment.yaml
 
-5. Can you do a HA of a database? Any way to keep the data persistent when pods are
-recreated?
-========
+# 5. Can you do a HA of a database? Any way to keep the data persistent when pods are recreated?
+
 
 Persistent storage is used to store the data seperately. We create volumes and mount them. It is declared in
 
@@ -44,8 +42,8 @@ volumes:
           claimName: task-pv-claim
 ```
 
-6. Add CI to the deployment process.
-========
+# 6. Add CI to the deployment process.
+
 I am familiar with gitlab-ci.yaml so I have created a dummy CI.
 ```shell
 
@@ -64,18 +62,17 @@ job1:
 
 
 
-7. Split your deployment into prd/qa/dev environment.
-========
+# 7. Split your deployment into prd/qa/dev environment.
+
 Create environemnt and deploy them. 
 
-8. Please suggest a monitoring solution for your system. How would you notify an admin
-that the resources are scarce?          
-========
+# 8. Please suggest a monitoring solution for your system. How would you notify an admin that the resources are scarce?          
+
 This can be used by grafana, but I am not familiar with it.
 
 
-FINAL VIEW
-========
+# FINAL VIEW
+
 ```shell
 gairik@gairik:~/Desktop/nodejs-mysql$ kubectl get pods
 NAME                                    READY   STATUS    RESTARTS   AGE
