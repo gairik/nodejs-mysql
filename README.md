@@ -19,7 +19,7 @@ I ended up a lot of time to setup Spring-boot applciation however due to some ja
 nodejs.yaml
 
 ### 2. Load balance the traffic to the backends.
-Services takes care of it. There is automatic round robin balancing done.
+Services takes care of it. There is default round robin balancing created with services.
 
 ### 3. Create policy to auto-heal or recreate the pod if it goes down or is unresponsive.
 
@@ -33,7 +33,7 @@ my-sql-deployment.yaml
 ### 5. Can you do a HA of a database? Any way to keep the data persistent when pods are recreated?
 
 
-Persistent storage is used to store the data seperately. We create volumes and mount them. It is declared in
+Persistent storage is used to store the data seperately. We create volumes and mount on them. So even if mysql crashes the data can be retrieved from PV. It is declared in
 
 ```shell
 volumes:
@@ -64,11 +64,11 @@ job1:
 
 ### 7. Split your deployment into prd/qa/dev environment.
 
-Create environemnt and deploy them. 
+Create environemnt such as prd/qa/dev and deploy on them. 
 
 ### 8. Please suggest a monitoring solution for your system. How would you notify an admin that the resources are scarce?          
 
-This can be used by grafana, but I am not familiar with it.
+This can be used by grafana or splunk or may be AWS cloudwatch. But I am not familiar with monitoring tools.
 
 
 # FINAL VIEW
