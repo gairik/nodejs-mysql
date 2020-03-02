@@ -13,7 +13,7 @@ kubeconfig: Configured
 
 ```
 
-1.Set up (in kubernetes/minikube) 2 pods with a java example app:
+1. Set up (in kubernetes/minikube) 2 pods with a java example app:
 ========
 I ended up a lot of time to setup Spring-boot applciation however due to some java issues in my system I could not create a jar file. I am not very familiar with the Spring frame work thereofore I was not successful with solve the issue. However I to go one with the problem statement I deployed a Nodejs application.
 nodejs.yaml
